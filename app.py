@@ -4,7 +4,7 @@ import firebase_admin
 from firebase_admin import credentials, db
 
 # Initialize Firebase Realtime Database
-cred = credentials.Certificate(r"C:\Users\vigne\OneDrive\Desktop\helmet detection\fire-836b7-firebase-adminsdk-o14a6-152f08120d.json")
+cred = credentials.Certificate(r""C:\Users\JITHU\Desktop\helmet\fire-836b7-firebase-adminsdk-o14a6-152f08120d.json"")
 firebase_admin.initialize_app(cred, {"databaseURL": "https://fire-836b7-default-rtdb.firebaseio.com/"})
 db_ref = db.reference("/helmet_detection")
 
