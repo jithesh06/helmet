@@ -52,14 +52,14 @@ while True:
     # Apply non-maximum suppression
     indices = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, nms_threshold)
 
-    helmet_detected = False
+    helmet_detected = 0
 
     if len(indices) > 0:
         for i in indices.flatten():
             x, y, w, h = boxes[i]
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             cv2.putText(frame, 'Helmet Detected', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            helmet_detected = True
+            helmet_detected = 1
 
     # Display the result on the frame
     if not helmet_detected:
